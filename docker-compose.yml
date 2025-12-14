@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  telegram-userbot:
+    build: .
+    container_name: telegram-userbot
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./sessions:/app/sessions
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_IDS=${ADMIN_IDS}
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge
