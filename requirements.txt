@@ -1,9 +1,38 @@
-python-telegram-bot==20.7
+# Core
+python>=3.9
+
+# Telegram
 pyrogram==2.0.106
 tgcrypto==1.2.5
+python-telegram-bot==20.7
+
+# Database
 sqlalchemy==2.0.23
-python-dotenv==1.0.0
-aiofiles==23.2.1
 aiosqlite==0.19.0
+alembic==1.12.1
+
+# Security
+cryptography==41.0.7
+pycryptodome==3.19.0
+
+# Networking
+aiohttp==3.9.1
+aiofiles==23.2.1
+httpx==0.25.2
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+colorama==0.4.6
 progress==1.6
-python-multipart==0.0.6
+
+# Async
+anyio==4.2.0
+asyncio==3.4.3
+
+# Logging
+loguru==0.7.2
+
+# CLI
+click==8.1.7
+rich==13.7.0
